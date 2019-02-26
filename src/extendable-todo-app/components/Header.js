@@ -6,6 +6,8 @@ import WbCloudyIcon from '@material-ui/icons/WbCloudy';
 import GrainIcon from '@material-ui/icons/Grain';
 import Grid from '@material-ui/core/Grid';
 
+import { withPlugins } from '../extend';
+
 const Header = props => (
   <AppBar position="static">
     <Toolbar>
@@ -24,4 +26,4 @@ const Header = props => (
   </AppBar>
 );
 
-export default Header;
+export default withPlugins(Header);

@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-
-import store from './state/store';
-import App from './components/App';
+import ExtendableTodoApp from './extendable-todo-app/index';
+import removeHeaderPlugin from './plugins/removeHeader';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <ExtendableTodoApp plugins={[removeHeaderPlugin]}/>,
   document.getElementById('root')
 );
