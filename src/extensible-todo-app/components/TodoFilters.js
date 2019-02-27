@@ -42,4 +42,5 @@ const mapDispatchToProps = dispatch => ({
   showMordacai: () => dispatch(actions.filterTodosByRegex('user', /Mordecai/)),
 });
 
+// withPlugins must be the innermost HOC to match the name of the target component
 export default connect(null, mapDispatchToProps)(withPlugins(TodoFilters));

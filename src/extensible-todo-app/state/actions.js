@@ -1,4 +1,5 @@
 import uuid from 'uuid/v4';
+import * as events from '../events';
 
 /***************************************
 Basic Actions
@@ -42,6 +43,8 @@ export const filterTodosByRegex = (field, regex) => (dispatch, getState) => {
 }
 
 export const trashTodo = (todoId) => (dispatch, getState) => {
+  const todo = getState().todos[todoId];
   dispatch(deleteTodo(todoId));
   dispatch(updateTodoFilter(getState().todoFilter.filter(id => id !== todoId)));
+  dispatch(events.todoDeleted(todo));
 }

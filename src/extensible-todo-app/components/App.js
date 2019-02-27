@@ -1,10 +1,21 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-
 import Header from './Header';
 import TodoEditor from './TodoEditor';
 import TodoTable from './TodoTable';
 import TodoFilters from './TodoFilters';
+import { withPlugins } from '../extend';
+
+const PluginHook = props => {
+  if (props.PluginComponent) {
+    return (
+      <Grid item>
+        <props.PluginComponent />
+      </Grid>
+    );
+  }
+  return null;
+}
 
 const App = props => (
   <Grid container direction="column" spacing={24}>
@@ -22,7 +33,8 @@ const App = props => (
         <TodoFilters />
       </Grid>
     </Grid>
+    <PluginHook {...props} />
   </Grid>
 );
 
-export default App;
+export default withPlugins(App);

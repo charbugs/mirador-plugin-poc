@@ -1,13 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './state/store';
-import App from './components/App';
+
+import createStore from './state/store';
 import { storePlugins } from './extend';
+import App from './components/App';
+
+
 export default function (props) {
 
-  if (props.plugins) {
-    storePlugins(props.plugins);
-  }
+  storePlugins(props.plugins);
+  const store = createStore(props.plugins);
 
   return (
     <Provider store={store}>

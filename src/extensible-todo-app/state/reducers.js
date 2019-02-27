@@ -40,7 +40,10 @@ function todoFilterReducer(state = defaultTodoFilterState, action) {
   }
 }
 
-export default combineReducers({
-  todos: todoReducer,
-  todoFilter: todoFilterReducer,
-})
+export default function creatRootReducer(pluginReducers) {
+  return combineReducers({
+    todos: todoReducer,
+    todoFilter: todoFilterReducer,
+    ...pluginReducers
+  });
+}

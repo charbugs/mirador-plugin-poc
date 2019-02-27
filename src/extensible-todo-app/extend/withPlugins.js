@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { getPlugins } from '.';
 
-export function withPlugins(TargetComponent, name) {
+// withPlugins must be the innermost HOC to match the name of the target component
+export function withPlugins(TargetComponent) {
   return class extends Component {
     render() {
 
