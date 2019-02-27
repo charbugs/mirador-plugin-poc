@@ -1,5 +1,5 @@
 
-let pluginStore;
+let pluginStore = [];
 
 export function storePlugins(plugins) {
   pluginStore = plugins;

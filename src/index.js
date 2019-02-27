@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ExtendableTodoApp from './extendable-todo-app/index';
-import removeHeaderPlugin from './plugins/removeHeader';
+import TodoAppImplementaion from './todo-app-implementation';
 
 ReactDOM.render(
-  <ExtendableTodoApp plugins={[removeHeaderPlugin]}/>,
+  <TodoAppImplementaion />,
   document.getElementById('root')
 );

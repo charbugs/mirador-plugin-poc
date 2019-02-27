@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 
 const defaultTodoState = {
   'todo-1': {
+    id: 'todo-1',
     user: 'Rigby',
-    text: 'Playing video games',
+    text: 'Play video games',
     date: (new Date()).toLocaleTimeString(),
   },
   'todo-2': {
+    id: 'todo-2',
     user: 'Mordecai',
     text: 'Meet with Margarete',
     date: (new Date()).toLocaleTimeString(),
@@ -27,6 +29,18 @@ function todoReducer(state = defaultTodoState , action) {
   }
 }
 
+const defaultTodoFilterState = [ 'todo-1', 'todo-2' ];
+
+function todoFilterReducer(state = defaultTodoFilterState, action) {
+  switch (action.type) {
+    case 'UPDATE_TODO_FILTER':
+      return action.payload
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-  todos: todoReducer
+  todos: todoReducer,
+  todoFilter: todoFilterReducer,
 })

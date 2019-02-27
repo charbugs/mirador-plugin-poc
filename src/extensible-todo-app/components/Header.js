@@ -8,6 +8,16 @@ import Grid from '@material-ui/core/Grid';
 
 import { withPlugins } from '../extend';
 
+const PluginHook = props => {
+  if (props.PluginComponent)
+    return (
+      <Grid item>
+        <props.PluginComponent />
+      </Grid>
+    )
+  return null;
+}
+
 const Header = props => (
   <AppBar position="static">
     <Toolbar>
@@ -21,6 +31,7 @@ const Header = props => (
         <Grid item>
           <GrainIcon />
         </Grid>
+        <PluginHook {...props} />
       </Grid>
     </Toolbar>
   </AppBar>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { getPlugins } from '.';
 
-export function withPlugins(TargetComponent) {
+export function withPlugins(TargetComponent, name) {
   return class extends Component {
     render() {
+
       const plugin = getPlugins().find(plugin => plugin.target === TargetComponent.name);
 
       if (!plugin) {
@@ -14,6 +15,9 @@ export function withPlugins(TargetComponent) {
       }
       else if (plugin.modus === 'replace') {
         return React.createElement(plugin.component, { ...this.props });
+      }
+      else if (plugin.modus === 'add') {
+        return <TargetComponent {...this.props} PluginComponent={plugin.component} />
       }
     }
   }
