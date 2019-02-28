@@ -5,7 +5,6 @@ import App from './components/App';
 
 
 export default function (store, props) {
-
   storePlugins(props.plugins);
   return (
     <Provider store={store}>
