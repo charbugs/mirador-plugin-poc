@@ -1,0 +1,35 @@
+{
+  "name": "extensible-todo-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charbugs/react-plugin-pattern"
+  },
+  "author": "Christopher Johnson",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "immutable": "^4.0.0-rc.12",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.6",
+    "@types/node": "^11.9.4",
+    "@types/react": "^16.8.3"
+  }
+}

@@ -11,6 +11,8 @@ import * as actions from '../state/actions';
 
 
 class TodoEditor extends React.Component {
+  props: any
+  state: any
   constructor(props) {
     super(props);
     this.state = {
@@ -30,7 +32,7 @@ class TodoEditor extends React.Component {
     this.setState({ text: ev.target.value });
   }
 
-  handleAddClick(ev) {
+  handleAddClick() {
     this.props.addTodoItem(
       this.state.user,
       this.state.text,

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoAppImplementaion from './todo-app-implementation';
+import TodoAppImplementation from './todo-app-implementation';
 
 ReactDOM.render(
-  <TodoAppImplementaion />,
+  <TodoAppImplementation />,
   document.getElementById('root')
 );

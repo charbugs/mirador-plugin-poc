@@ -1,14 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './state/store';
-import App from './components/App';
 import { storePlugins } from './extend';
-export default function (props) {
+import App from './components/App';
 
-  if (props.plugins) {
-    storePlugins(props.plugins);
-  }
 
+export default function (store, props) {
+
+  storePlugins(props.plugins);
   return (
     <Provider store={store}>
       <App />
