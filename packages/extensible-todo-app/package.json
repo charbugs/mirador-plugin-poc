@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/charbugs/react-plugin-pattern"
   },
-  "author": "Christopher Johnson",
+  "author": "Matthias Maaß",
   "license": "Apache-2.0",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
