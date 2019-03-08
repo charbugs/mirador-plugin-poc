@@ -24,8 +24,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "main": "src/index.js",
   "files": [
-    "src/index.js", "src"
+    "src"
   ],
   "browserslist": [
     ">0.2%",
