@@ -11,8 +11,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This repo shows how a plugin system for Mirador may look like. There are to folders under `./src`:
 
-* `./src/extensible-todo-app` is an simple react todo application with a plugin system.
-* `./src/todo-app-implementation` is an react application that uses and embedds the todo app and extends it with some plugins.
+* `./src/extensible-todo-app` is a simple react todo application with a plugin system.
+* `./src/todo-app-implementation` is a react application that uses/embeds the todo app and extends it with some plugins.
 
 ## Plugin scenarios
 
@@ -25,8 +25,8 @@ There are support for three kinds of plugins in the exentsible todo app:
 Furthermore, a plugin can provide custom reducers to the redux store of the todo app and therefore
 
 * can have its own state in the store of the todo app,
-* can write to this state piece via the reducer,
-* can read its state (and the state of other reducers) via the mapStateToProps.
+* can write to this state via the reducer,
+* can read its state (and the state of other reducers) via mapStateToProps.
 * can intercept all action types that the todo app dispatches.
 
-The ability to provide custom actions and use the existing actions of the todo app is not fully examined so far.
+The ability to provide custom actions and the use of the existing actions is not fully examined so far.
