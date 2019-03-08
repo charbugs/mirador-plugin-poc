@@ -13,7 +13,7 @@ const deletedTodosReducer = (state = [], action) => {
 
 const DeletedTodos = props => (
   <Paper style={{ padding: '24px 24px' }}>
-    <h3>Deleted Todos</h3>
+    <h3>Deleted Todos (Plugin)</h3>
     <ul>
       {
         props.deletedTodos.map((todo, index) => <li key={index}>{todo.text}</li>)
