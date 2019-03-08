@@ -2,10 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Install
 
-`$ git clone https://github.com/charbugs/mirador-plugin-poc.git`
-`$ cd mirador-plugin-poc`
-`$ npm install`
-`$ npm start`
+* `$ git clone https://github.com/charbugs/mirador-plugin-poc.git`
+* `$ cd mirador-plugin-poc`
+* `$ npm install`
+* `$ npm start`
 
 ## Description
 
